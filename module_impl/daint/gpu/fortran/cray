@@ -1,0 +1,12 @@
+module           load gpu/gpu-base
+conflict         gpu/fortran/gnu
+conflict         gpu/fortran/pgi
+module           load PrgEnv-cray
+module           load cce/8.6.1 #maybe we should not specify the version here?
+setenv           CXX      $GCC_PATH/snos/bin/g++
+setenv           CC       $GCC_PATH/snos/bin/gcc
+setenv           FC       ftn
+setenv           LDFLAGS  "-L$GCC_PATH/snos/lib64 ${LDFLAGS}"
+
+module-whatis    TODO
+

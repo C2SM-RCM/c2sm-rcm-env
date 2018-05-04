@@ -1,0 +1,5 @@
+
+module           load mch-base
+module           load daint-gpu
+module           load craype-accel-nvidia60
+

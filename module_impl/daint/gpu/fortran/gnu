@@ -1,0 +1,11 @@
+module           load gpu/gpu-base
+conflict         gpu/fortran/cray
+conflict         gpu/fortran/pgi
+module           switch PrgEnv-cray PrgEnv-gnu
+module           switch gcc gcc/5.3.0
+setenv           CXX      CC
+setenv           CC       cc
+setenv           FC       ftn
+
+module-whatis    TODO
+

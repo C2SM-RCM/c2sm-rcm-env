@@ -1,0 +1,3 @@
+
+module           load CMake
+module           load cray-netcdf #maybe after?
