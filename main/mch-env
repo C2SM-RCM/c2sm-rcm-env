@@ -1,0 +1,30 @@
+#%Module1.0#####################################################################
+##
+##
+
+proc ModulesHelp { } {
+    puts stderr "bla"
+#    puts stderr "bla: '$ModulesCurrentModulefile'"
+}
+
+set hostname [info hostname]
+if {[regexp {daint.*} $hostname]} {
+    set machine "daint"
+}
+
+
+set mchenvroot [file dirname $ModulesCurrentModulefile]/../modules/$machine
+
+puts stderr "Loading environment for $machine"
+
+module use $mchenvroot
+
+#proc getResourceDirectory {} {
+#    variable myLocation
+#    return [file dirname $myLocation]
+#}
+#
+#set savedDir [pwd]
+#
+#use daint
+
