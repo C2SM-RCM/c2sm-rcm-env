@@ -13,11 +13,11 @@ if {[regexp {daint.*} $hostname]} {
 }
 
 
-set mchenvroot [file dirname $ModulesCurrentModulefile]/../modules/$machine
+set c2smenvroot [file dirname $ModulesCurrentModulefile]/../modules/$machine
 
 puts stderr "Loading environment for $machine"
 
-module use $mchenvroot
+module use $c2smenvroot
 
 #proc getResourceDirectory {} {
 #    variable myLocation
