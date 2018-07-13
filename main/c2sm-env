@@ -3,13 +3,14 @@
 ##
 
 proc ModulesHelp { } {
-    puts stderr "bla"
-#    puts stderr "bla: '$ModulesCurrentModulefile'"
+    puts stderr "C2SM environement for CSCS machines"
 }
 
 set hostname [info hostname]
 if {[regexp {daint.*} $hostname]} {
     set machine "daint"
+} else if {[regexp {kesch.*} $hostname]} {
+    set machine "kesch"
 }
 
 
@@ -18,13 +19,4 @@ set c2smenvroot [file dirname $ModulesCurrentModulefile]/../modules/$machine
 puts stderr "Loading environment for $machine"
 
 module use $c2smenvroot
-
-#proc getResourceDirectory {} {
-#    variable myLocation
-#    return [file dirname $myLocation]
-#}
-#
-#set savedDir [pwd]
-#
-#use daint
 
