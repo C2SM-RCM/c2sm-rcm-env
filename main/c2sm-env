@@ -9,8 +9,11 @@ proc ModulesHelp { } {
 set hostname [info hostname]
 if {[regexp {daint.*} $hostname]} {
     set machine "daint"
-} else if {[regexp {kesch.*} $hostname]} {
+} elseif {[regexp {kesch.*} $hostname]} {
     set machine "kesch"
+} else {
+    puts stderr "This machine is not supported!"
+    exit 1
 }
 
 
