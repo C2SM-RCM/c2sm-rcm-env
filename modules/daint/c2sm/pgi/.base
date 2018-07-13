@@ -1,8 +1,6 @@
 #%Module1.0#####################################################################
 
-module           load mch/gpu/base
-conflict         mch/gpu/fortran/cray
-conflict         mch/gpu/fortran/gnu
+module           load c2sm/.base
 
 module           unload PrgEnv-cray
 module           load PrgEnv-pgi

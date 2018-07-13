@@ -1,6 +1,7 @@
 #%Module1.0#####################################################################
 
-module           load mch/base
+conflict         c2sm/.base_cpu
+
 module           load daint-gpu
 module           load craype-accel-nvidia60
 
