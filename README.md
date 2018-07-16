@@ -5,9 +5,9 @@
 Load the correct module files for your machine by loading
 
 ```
-module load <path-to-repo>/main/mch-env
+module load <absolute-path-to-repo>/main/c2sm-env
 ```
 
 After that the modules are available, show them with `module avail`.
 
-E.g. `module load mch/gpu/fortran/cray`.
+Then load with, e.g. `module load c2sm/pgi/gpu`.
