@@ -13,10 +13,4 @@ module           load cudatoolkit/8.0.61
 module           load cray-libsci
 setenv           LD_PRELOAD /opt/mvapich2/gdr/no-mcast/2.2/cuda8.0/mpirun/gnu4.8.5/lib64/libmpi.so
 
-# TODO not sure if needed:
-setenv           MVAPICH_MODULE "mvapich2_gnu/2.2rc1.0.2"
 setenv           NVIDIA_CUDA_ARCH "sm_37"
-
-
-
-
