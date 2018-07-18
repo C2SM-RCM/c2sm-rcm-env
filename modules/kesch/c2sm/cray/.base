@@ -1,0 +1,10 @@
+#%Module1.0#####################################################################
+
+module           load craype-accel-nvidia35
+module           load netCDF-Fortran/4.4.4-CrayCCE-17.06
+module           load gcc/5.4.0-2.26
+
+setenv           FC "ftn -D__CRAY_FORTRAN__" 
+
+module-whatis    TODO
+
