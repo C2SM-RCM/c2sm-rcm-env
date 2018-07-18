@@ -17,7 +17,7 @@ if {[regexp {daint.*} $hostname]} {
 }
 
 
-set c2smenvroot [file dirname $ModulesCurrentModulefile]/../modules/$machine
+set c2smenvroot [file dirname $ModulesCurrentModulefile]/modules/$machine
 
 puts stderr "Loading environment for $machine"
 
