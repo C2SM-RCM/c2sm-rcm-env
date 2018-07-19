@@ -1,0 +1,15 @@
+#%Module1.0#####################################################################
+
+if { [module-info mode load] } {
+    module           switch PrgEnv-cray PrgEnv-gnu
+} elseif { [module-info mode remove] } {
+    module           switch PrgEnv-gnu PrgEnv-cray
+}
+
+global           GCC_PATH
+setenv           CXX CC
+setenv           CC cc
+setenv           FC ftn
+
+module-whatis    TODO
+

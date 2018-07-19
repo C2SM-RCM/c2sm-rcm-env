@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+
+if { [module-info mode load] } {
+    module           rm PrgEnv-cray
+    module           load PrgEnv-intel
+} elseif { [module-info mode remove] } {
+    module           switch PrgEnv-intel PrgEnv-cray
+}
+
+# Load gcc/5.3.0 to link with the C++ Dynamical Core
+module           load gcc/5.3.0
+
+global           GCC_PATH
+setenv           CXX $env(GCC_PATH)/snos/bin/g++
+setenv           CC $env(GCC_PATH)/snos/bin/gcc
+setenv           FC ifort
+
+prepend-path -d " " LDFLAGS "-L$env(GCC_PATH)/snos/lib64"
+
+module-whatis    TODO
+

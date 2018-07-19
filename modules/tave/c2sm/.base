@@ -1,0 +1,6 @@
+#%Module1.0#####################################################################
+
+module           load CMake
+
+#setenv           BOOST_ROOT /project/c14/install/daint/boost/boost_1_49_0
+

@@ -11,6 +11,8 @@ if {[regexp {daint.*} $hostname]} {
     set machine "daint"
 } elseif {[regexp {kesch.*} $hostname]} {
     set machine "kesch"
+} elseif {[regexp {tave.*} $hostname]} {
+    set machine "tave"
 } else {
     puts stderr "This machine is not supported!"
     exit 1
