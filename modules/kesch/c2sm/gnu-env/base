@@ -10,6 +10,8 @@ module           load netcdf-fortran/4.4.4-gmvolf-17.02
 module           load hdf5/1.8.18-gmvolf-17.02
 
 setenv           FC gfortran 
+setenv           CXX g++
+setenv           CC gcc
 
 module-whatis    TODO
 
