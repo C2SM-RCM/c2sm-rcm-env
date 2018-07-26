@@ -1,6 +1,10 @@
 #%Module1.0#####################################################################
 
-module           load c2sm/.base
+conflict         c2sm/cray/base
+conflict         c2sm/gnu/base
+conflict         c2sm/pgi/base
+
+module           load c2sm/base
 
 if { [module-info mode load] } {
     module           rm PrgEnv-cray
@@ -9,17 +13,13 @@ if { [module-info mode load] } {
     module           switch PrgEnv-intel PrgEnv-cray
 }
 
-# Load gcc/5.3.0 to link with the C++ Dynamical Core
-module           load gcc/5.3.0
+module           load c2sm/gnu_for_cpp
 
-global           GCC_PATH
-setenv           CXX $env(GCC_PATH)/snos/bin/g++
-setenv           CC $env(GCC_PATH)/snos/bin/gcc
 setenv           FC ftn
 
 prepend-path -d " " LDFLAGS "-L$env(GCC_PATH)/snos/lib64"
 
-module           load c2sm/.base_post
+module           load cray-netcdf
 
 module-whatis    TODO
 
