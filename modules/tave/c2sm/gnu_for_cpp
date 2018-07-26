@@ -1,15 +1,11 @@
 #%Module1.0#####################################################################
 
-# we assume starting from a default module environment
-prereq           PrgEnv-cray
-
 module           load gcc
 
 global           GCC_PATH
 setenv           CXX $env(GCC_PATH)/snos/bin/g++
 setenv           CC $env(GCC_PATH)/snos/bin/gcc
-setenv           FC ftn
 prepend-path -d " " LDFLAGS "-L$env(GCC_PATH)/snos/lib64"
 
-module-whatis    TODO
+module-whatis    "Load gcc to link with the C++ dynamical core" 
 

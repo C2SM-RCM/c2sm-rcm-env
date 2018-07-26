@@ -7,15 +7,9 @@ if { [module-info mode load] } {
     module           switch PrgEnv-pgi PrgEnv-cray
 }
 
-# Load gcc/5.3.0 to link with the C++ Dynamical Core
-module           load gcc/5.3.0
+module           load c2sm/gnu_for_cpp
 
-global           GCC_PATH
-setenv           CXX $env(GCC_PATH)/snos/bin/g++
-setenv           CC $env(GCC_PATH)/snos/bin/gcc
 setenv           FC pgfortran
-
-prepend-path -d " " LDFLAGS "-L$env(GCC_PATH)/snos/lib64"
 
 module-whatis    TODO
 

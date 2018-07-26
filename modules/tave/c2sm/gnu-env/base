@@ -6,7 +6,6 @@ if { [module-info mode load] } {
     module           switch PrgEnv-gnu PrgEnv-cray
 }
 
-global           GCC_PATH
 setenv           CXX CC
 setenv           CC cc
 setenv           FC ftn
