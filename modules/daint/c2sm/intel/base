@@ -11,9 +11,12 @@ module           load c2sm/base
 if { [module-info mode load] } {
     module           rm PrgEnv-cray
     module           load PrgEnv-intel
+    module           load /opt/modulefiles/intel/17.0.4.196
 } elseif { [module-info mode remove] } {
     module           switch PrgEnv-intel PrgEnv-cray
 }
+
+module load intel
 
 setenv           CC cc
 setenv           CXX CC
