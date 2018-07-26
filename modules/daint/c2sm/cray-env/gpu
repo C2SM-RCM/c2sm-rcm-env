@@ -1,6 +1,6 @@
 #%Module1.0#####################################################################
 
-module           load c2sm/gnu/base
+module           load c2sm/cray-env/base
 module           load c2sm/gpu
 
 module-whatis    TODO
