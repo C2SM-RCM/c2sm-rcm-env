@@ -1,6 +1,6 @@
 #%Module1.0#####################################################################
 
-module           load c2sm/pgi/base
+module           load c2sm/pgi-env/base
 module           load c2sm/gpu
 
 module-whatis    TODO
