@@ -19,8 +19,6 @@ setenv           CC cc
 setenv           CXX CC
 setenv           FC ftn
 
-prepend-path -d " " LDFLAGS "-L$env(GCC_PATH)/snos/lib64"
-
 module           load cray-netcdf
 
 module-whatis    TODO
