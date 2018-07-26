@@ -3,7 +3,8 @@
 module           load c2sm/base
 
 if { [module-info mode load] } {
-    module           switch PrgEnv-cray PrgEnv-pgi
+    module           rm PrgEnv-cray
+    module           load PrgEnv-pgi
     module           switch pgi pgi/17.5.0
 } elseif { [module-info mode remove] } {
     module           switch PrgEnv-pgi PrgEnv-cray
