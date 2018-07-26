@@ -1,6 +1,6 @@
 #%Module1.0#####################################################################
 
-prereq           c2sm/cray/base
+module           load c2sm/cray/base
 module           load c2sm/gpu
 
 module-whatis    TODO
