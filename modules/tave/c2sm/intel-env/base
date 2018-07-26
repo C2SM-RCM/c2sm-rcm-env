@@ -1,5 +1,11 @@
 #%Module1.0#####################################################################
 
+conflict         c2sm/gnu/base
+conflict         c2sm/cray/base
+conflict         c2sm/pgi/base
+
+module           load c2sm/base
+
 if { [module-info mode load] } {
     module           rm PrgEnv-cray
     module           load PrgEnv-intel
