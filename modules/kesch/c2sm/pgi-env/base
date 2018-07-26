@@ -3,7 +3,8 @@
 module           load PrgEnv-pgi/17.10
 module           unload openmpi/2.1.2/2017
 module           load mvapich2gdr_gnu/2.3a_cuda_8.0_pgi17.10
-module           load gcc/5.4.0-2.26
+
+module           load c2sm/gnu_for_cpp
 
 setenv           FC mpif90 
 
