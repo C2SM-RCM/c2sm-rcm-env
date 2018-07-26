@@ -1,8 +1,9 @@
 #%Module1.0#####################################################################
 
+conflict         c2sm/gnu/base
+conflict         c2sm/pgi/base
 
-module           load c2sm/.base
-module           load c2sm/cray/.base
+module           load c2sm/base
 
 if { [module-info mode load] } {
     module           switch mvapich2_cce/2.2rc1.0.3_cuda80 mvapich2_cce/2.2rc1.0.3 
@@ -10,7 +11,13 @@ if { [module-info mode load] } {
     module           switch mvapich2_cce/2.2rc1.0.3 mvapich2_cce/2.2rc1.0.3_cuda80
 }
 
-module           load c2sm/.base_post
+module           load craype-accel-nvidia35
+module           load netCDF-Fortran/4.4.4-CrayCCE-17.06
+
+module           load c2sm/gnu_for_cpp
+
+setenv           FC "ftn -D__CRAY_FORTRAN__" 
+
 
 module-whatis    TODO
 
