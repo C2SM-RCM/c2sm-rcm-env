@@ -1,13 +1,13 @@
 #%Module1.0#####################################################################
 
-conflict         c2sm/gnu/base
-conflict         c2sm/intel/base
-conflict         c2sm/pgi/base
-
 module           load c2sm/base
 
-# we assume starting from a default module environment
-prereq           PrgEnv-cray
+if { [module-info mode load] } {
+    module           switch PrgEnv-cray PrgEnv-pgi
+    module           switch pgi pgi/17.5.0
+} elseif { [module-info mode remove] } {
+    module           switch PrgEnv-pgi PrgEnv-cray
+}
 
 module           load c2sm/gnu_for_cpp
 
