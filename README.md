@@ -1,13 +1,13 @@
-# mch-env
+# c2sm-rcm-env
 
 ## Getting started
 
-Load the correct module files for your machine by loading
+1. Clone this repository
+
+2. Load the correct module files for your machine by loading
 
 ```
-module load <absolute-path-to-repo>/main/c2sm-env
+module load <absolute-path-to-repo>/env
 ```
 
-After that the modules are available, show them with `module avail`.
-
-Then load with, e.g. `module load c2sm/pgi/gpu`.
+3. After that the modules are available, show them with `module avail`. Then load with, e.g. `module load c2sm/pgi-env/gpu`.
