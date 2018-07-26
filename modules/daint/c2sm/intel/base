@@ -1,5 +1,7 @@
 #%Module1.0#####################################################################
 
+# This environment is different as it does not set the c++ compiler to gnu
+
 conflict         c2sm/cray/base
 conflict         c2sm/gnu/base
 conflict         c2sm/pgi/base
@@ -13,8 +15,8 @@ if { [module-info mode load] } {
     module           switch PrgEnv-intel PrgEnv-cray
 }
 
-module           load c2sm/gnu_for_cpp
-
+setenv           CC cc
+setenv           CXX CC
 setenv           FC ftn
 
 prepend-path -d " " LDFLAGS "-L$env(GCC_PATH)/snos/lib64"
