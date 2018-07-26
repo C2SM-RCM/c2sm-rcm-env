@@ -1,0 +1,13 @@
+#%Module1.0#####################################################################
+
+
+module           load c2sm/cray-env/base
+
+if { [module-info mode load] } {
+    module           switch mvapich2_cce/2.2rc1.0.3  mvapich2gdr_gnu/2.2_cuda_8.0 
+} elseif { [module-info mode remove] } {
+    module           switch mvapich2gdr_gnu/2.2_cuda_8.0 mvapich2_cce/2.2rc1.0.3
+}
+
+module-whatis    TODO
+

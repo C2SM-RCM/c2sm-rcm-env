@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+
+conflict         c2sm/cray/base
+conflict         c2sm/intel/base
+conflict         c2sm/pgi/base
+
+module           load c2sm/base
+
+if { [module-info mode load] } {
+    module           switch PrgEnv-cray PrgEnv-gnu
+} elseif { [module-info mode remove] } {
+    module           switch PrgEnv-gnu PrgEnv-cray
+}
+
+setenv           CXX CC
+setenv           CC cc
+setenv           FC ftn
+
+module-whatis    TODO
+

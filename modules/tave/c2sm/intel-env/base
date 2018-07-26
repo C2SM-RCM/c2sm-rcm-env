@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+
+conflict         c2sm/gnu/base
+conflict         c2sm/cray/base
+conflict         c2sm/pgi/base
+
+module           load c2sm/base
+
+if { [module-info mode load] } {
+    module           rm PrgEnv-cray
+    module           load PrgEnv-intel
+} elseif { [module-info mode remove] } {
+    module           switch PrgEnv-intel PrgEnv-cray
+}
+
+# probably we want to use the intel compiler for everything on tave?
+setenv           CC cc
+setenv           CXX CC
+setenv           FC ftn
+
+module-whatis    TODO
+

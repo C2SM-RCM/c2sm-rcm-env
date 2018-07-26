@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+
+# This environment is different as it does not set the c++ compiler to gnu
+
+conflict         c2sm/cray/base
+conflict         c2sm/gnu/base
+conflict         c2sm/pgi/base
+
+module           load c2sm/base
+
+if { [module-info mode load] } {
+    module       switch PrgEnv-cray PrgEnv-intel
+} elseif { [module-info mode remove] } {
+    module       switch PrgEnv-intel PrgEnv-cray
+}
+
+setenv           CC cc
+setenv           CXX CC
+setenv           FC ftn
+
+module           load cray-netcdf
+
+module-whatis    TODO
+

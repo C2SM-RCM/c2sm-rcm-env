@@ -1,0 +1,12 @@
+#%Module1.0#####################################################################
+
+module           load PrgEnv-pgi/17.10
+module           unload openmpi
+module           load mvapich2gdr_gnu/2.3a_cuda_8.0_pgi17.10
+
+module           load c2sm/gnu_for_cpp
+
+setenv           FC mpif90 
+
+module-whatis    TODO
+

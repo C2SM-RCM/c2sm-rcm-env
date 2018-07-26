@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+
+conflict         c2sm/gnu/base
+conflict         c2sm/intel/base
+conflict         c2sm/pgi/base
+
+module           load c2sm/base
+
+# we assume starting from a default module environment
+prereq           PrgEnv-cray
+
+module           load c2sm/gnu_for_cpp
+setenv           FC ftn
+
+module-whatis    TODO
+

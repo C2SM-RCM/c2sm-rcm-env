@@ -1,6 +1,0 @@
-#%Module1.0#####################################################################
-
-conflict         c2sm/.base_cpu
-
-module           load craype-accel-nvidia60
-
