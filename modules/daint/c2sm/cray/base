@@ -1,20 +1,16 @@
 #%Module1.0#####################################################################
 
-
-module           load c2sm/base
 conflict         c2sm/gnu/base
 conflict         c2sm/intel/base
 conflict         c2sm/pgi/base
 
+module           load c2sm/base
+
 # we assume starting from a default module environment
 prereq           PrgEnv-cray
 
-# Load gcc/5.3.0 to link with the C++ dynamical core
-module           load gcc/5.3.0
+module           load c2sm/gnu_for_cpp
 
-global           GCC_PATH
-setenv           CXX $env(GCC_PATH)/snos/bin/g++
-setenv           CC $env(GCC_PATH)/snos/bin/gcc
 setenv           FC ftn
 prepend-path -d " " LDFLAGS "-L$env(GCC_PATH)/snos/lib64"
 
