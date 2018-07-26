@@ -1,7 +1,11 @@
 #%Module1.0#####################################################################
 
+conflict         c2sm/cray/base
+conflict         c2sm/pgi/base
+
+module           load c2sm/base
+
 module           load PrgEnv-gnu/17.02
-module           load cmake/3.9.1
 module           load netcdf-fortran/4.4.4-gmvolf-17.02
 module           load hdf5/1.8.18-gmvolf-17.02
 
