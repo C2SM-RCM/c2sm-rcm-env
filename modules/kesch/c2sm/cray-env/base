@@ -7,8 +7,8 @@ module           load c2sm/base
 
 module           load craype-accel-nvidia35
 module           load netCDF-Fortran/4.4.4-CrayCCE-17.06
-
-module           load c2sm/gnu_for_cpp
+global           EBROOTNETCDF
+setenv           NETCDF_PATH $env(EBROOTNETCDF)
 
 if { [module-info mode load] } {
     module           switch mvapich2_cce/2.2rc1.0.3_cuda80 mvapich2_cce/2.2rc1.0.3 
@@ -17,6 +17,8 @@ if { [module-info mode load] } {
 }
 
 setenv           FC "ftn -D__CRAY_FORTRAN__" 
+setenv           CXX CC
+setenv           CC cc
 
 module-whatis    TODO
 
