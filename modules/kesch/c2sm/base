@@ -11,6 +11,6 @@ if { [module-info mode load] } {
 
 module           load cudatoolkit/8.0.61
 module           load cray-libsci
-setenv           LD_PRELOAD /opt/mvapich2/gdr/no-mcast/2.2/cuda8.0/mpirun/gnu4.8.5/lib64/libmpi.so
+#setenv           LD_PRELOAD /opt/mvapich2/gdr/no-mcast/2.2/cuda8.0/mpirun/gnu4.8.5/lib64/libmpi.so
 
 setenv           NVIDIA_CUDA_ARCH "sm_37"
