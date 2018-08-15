@@ -10,7 +10,7 @@ set hostname [info hostname]
 if {[regexp {daint.*} $hostname]} {
     set machine "daint"
 } elseif {[regexp {dom.*} $hostname]} {
-    set machine "daint" # specialize for dom if needed
+    set machine "daint"
 } elseif {[regexp {kesch.*} $hostname]} {
     set machine "kesch"
 } elseif {[regexp {tave.*} $hostname]} {
