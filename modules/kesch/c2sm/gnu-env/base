@@ -7,6 +7,8 @@ module           load c2sm/base
 
 module           load PrgEnv-gnu/17.02
 module           load netcdf-fortran/4.4.4-gmvolf-17.02
+global           EBROOTNETCDF
+setenv           NETCDF_PATH $env(EBROOTNETCDF)
 module           load hdf5/1.8.18-gmvolf-17.02
 
 setenv           FC gfortran 
