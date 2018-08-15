@@ -10,9 +10,9 @@ if { [module-info mode load] } {
     module           switch PrgEnv-pgi PrgEnv-cray
 }
 
-module           load c2sm/gnu_for_cpp
-
 setenv           FC ftn
+setenv           CXX CC
+setenv           CC cc
 
 module           load cray-netcdf
 
