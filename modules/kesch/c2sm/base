@@ -12,5 +12,5 @@ if { [module-info mode load] } {
 module           load cudatoolkit/8.0.61
 module           load cray-libsci
 
-setenv           NVIDIA_CUDA_ARCH "sm_37
+setenv           NVIDIA_CUDA_ARCH "sm_37"
 
