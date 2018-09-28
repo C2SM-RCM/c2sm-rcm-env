@@ -13,4 +13,5 @@ module           load cudatoolkit/8.0.61
 module           load cray-libsci
 
 setenv           NVIDIA_CUDA_ARCH "sm_37"
+setenv           DEFAULT_BOOST_ROOT /project/c14/install/kesch/boost/boost_1_49_0
 
