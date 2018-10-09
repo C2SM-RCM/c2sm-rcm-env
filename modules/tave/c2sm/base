@@ -2,5 +2,5 @@
 
 module           load CMake
 
-#setenv           BOOST_ROOT /project/c14/install/daint/boost/boost_1_49_0
+setenv           DEFAULT_BOOST_ROOT /project/c14/install/daint/boost/boost_1_49_0 # only headers (therefore same as daint)
 
