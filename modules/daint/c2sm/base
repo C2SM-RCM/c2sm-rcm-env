@@ -3,6 +3,5 @@
 module           load daint-gpu
 module           load /users/jenkins/easybuild/daint/haswell/modules/all/CMake/3.12.4 
 
-setenv           DEFAULT_BOOST_ROOT /project/c14/install/daint/boost/boost_1_67_0
-
+setenv           DEFAULT_BOOST_ROOT /scratch/snx3000/jenkins/install/boost/boost_1_67_0/ 
 
