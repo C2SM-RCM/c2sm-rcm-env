@@ -4,6 +4,8 @@ module           load c2sm/gnu-env/base
 module           load c2sm/gpu
 
 setenv           CUDAHOSTCXX CC
+setenv           MPICH_RDMA_ENABLED_CUDA=1
+setenv           MPICH_G2G_PIPELINE=64
 
 module-whatis    TODO
 
