@@ -4,5 +4,10 @@
 module           load c2sm/gnu-env/base
 module           load c2sm/gpu
 
-module-whatis    TODO
+if { [module-info mode load] } {
+    module           switch mvapich2/2.2-gcc-5.4.0-2.26  mvapich2gdr_gnu/2.2_cuda_8.0
+} elseif { [module-info mode remove] } {
+    module           switch mvapich2gdr_gnu/2.2_cuda_8.0 mvapich2/2.2-gcc-5.4.0-2.26
+}
 
+module-whatis    TODO
