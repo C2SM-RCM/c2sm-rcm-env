@@ -10,4 +10,6 @@ if { [module-info mode load] } {
     module           switch mvapich2gdr_gnu/2.2_cuda_8.0 mvapich2/2.2-gcc-5.4.0-2.26
 }
 
+setenv           LD_PRELOAD /opt/mvapich2/gdr/no-mcast/2.2/cuda8.0/mpirun/gnu4.8.5/lib64/libmpi.so
+
 module-whatis    TODO
