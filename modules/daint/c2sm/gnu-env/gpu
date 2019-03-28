@@ -3,5 +3,6 @@
 module           load c2sm/gnu-env/base
 module           load c2sm/gpu
 
-module-whatis    TODO
+setenv           CUDAHOSTCXX CC
 
+module-whatis    TODO
